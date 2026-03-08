@@ -45,6 +45,16 @@ A detailed, filterable data table containing every sample's metadata, detection 
 
 ---
 
+## 🧠 Detection Models
+
+Deepfake Data Forge integrates directly with pre-trained vision models to generate baseline confidence scores for how "fake" a piece of media appears.
+
+Currently supported out-of-the-box:
+- **Primary Model**: [`dima806/deepfake_vs_real_image_detection`](https://huggingface.co/dima806/deepfake_vs_real_image_detection) — A Vision Transformer (ViT-base) model served via HuggingFace's `transformers` library. 
+- **ONNX Mode**: The pipeline also supports dropping in standard ONNX format detection models into the `models/` directory for accelerated CPU/GPU inference without the heavy Python ecosystem overhead.
+
+---
+
 ## 🛠 Tech Stack
 
 - **Core Application:** Python 3.10+
