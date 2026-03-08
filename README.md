@@ -14,8 +14,32 @@ Training robust deepfake detection models requires massive amounts of well-curat
 3. **Data Quality Validation:** Automated checks to ensure all media meets strict quality standards and formatting before it ever reaches a training run.
 4. **Interactive Explorer:** A rich Streamlit dashboard to visually explore dataset distributions, validation reports, and baseline model scores.
 
-> [!NOTE] 
-> For more details on the underlying data structure, model schemas, and the processing pipeline source code, see the core component repository: [**deepfake-data-tool**](https://github.com/michaelromero212/deepfake-data-tool)
+## Relationship to v1
+
+> 👉 For a walkthrough of the core pipeline architecture and project structure,
+> see the [v1 repository](https://github.com/michaelromero212/deepfake-data-tool).
+
+**Why the validation results look different between v1 and v2:**
+
+v1 uses a mock detector that simulates scores using statistical distributions —
+results are clean and deterministic by design, making it easy to inspect the
+pipeline structure.
+
+<img src="screenshots/v1_validation.jpg" alt="v1 Validation Results (Mock Pipeline)" width="600"/>
+
+v2 integrates a real pre-trained ViT model
+([dima806/deepfake_vs_real_image_detection](https://huggingface.co/dima806/deepfake_vs_real_image_detection))
+running actual inference. The 3 `label_score_mismatch` warnings you'll see in
+v2's validation report are the model flagging samples where its confidence
+disagrees with the assigned label — expected behavior when scoring synthetic
+sample images (solid-color test frames) that don't resemble the face data the
+model was trained on. On a real dataset of human faces, these warnings surface
+genuine mislabelling candidates for human review.
+
+<img src="screenshots/v2_validation.jpg" alt="v2 Validation Results (Live Inference)" width="600"/>
+
+This difference between v1 and v2 intentionally demonstrates the progression
+from a testable mock pipeline to a live ML inference system.
 
 ---
 
