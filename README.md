@@ -14,6 +14,9 @@ Training robust deepfake detection models requires massive amounts of well-curat
 3. **Data Quality Validation:** Automated checks to ensure all media meets strict quality standards and formatting before it ever reaches a training run.
 4. **Interactive Explorer:** A rich Streamlit dashboard to visually explore dataset distributions, validation reports, and baseline model scores.
 
+> [!NOTE] 
+> For more details on the underlying data structure, model schemas, and the processing pipeline source code, see the core component repository: [**deepfake-data-tool**](https://github.com/michaelromero212/deepfake-data-tool)
+
 ---
 
 ## 📸 Dashboard Overview & Screenshots
