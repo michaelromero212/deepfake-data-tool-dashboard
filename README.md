@@ -23,6 +23,10 @@ Training robust deepfake detection models requires massive amounts of well-curat
 
 The included Streamlit dashboard provides deep insights into the dataset generation and validation process.
 
+### Full Dashboard View
+Here is a complete view of the Deepfake Data Forge Streamlit dashboard.
+![Full Dashboard View](screenshots/00_full_dashboard.jpg)
+
 ### 1. High-Level Metrics
 Get an instant overview of the total samples, media types (audio, video, images), and label distribution (real vs. synthetic) in the current dataset iteration.
 ![Dashboard Overview - High Level Metrics](screenshots/01_metrics.jpg)
