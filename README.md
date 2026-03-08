@@ -25,7 +25,9 @@ v1 uses a mock detector that simulates scores using statistical distributions â€
 results are clean and deterministic by design, making it easy to inspect the
 pipeline structure.
 
-![v1 Validation Results (Mock Pipeline)](screenshots/v1_validation.jpg)
+
+
+![v1 Validation Results (Live Inference)](screenshots/v2_validation.jpg)
 
 v2 integrates a real pre-trained ViT model
 ([dima806/deepfake_vs_real_image_detection](https://huggingface.co/dima806/deepfake_vs_real_image_detection))
@@ -36,7 +38,7 @@ sample images (solid-color test frames) that don't resemble the face data the
 model was trained on. On a real dataset of human faces, these warnings surface
 genuine mislabelling candidates for human review.
 
-![v2 Validation Results (Live Inference)](screenshots/v2_validation.jpg)
+![v2 Validation Results (Mock Pipeline)](screenshots/v1_validation.jpg)
 
 This difference between v1 and v2 intentionally demonstrates the progression
 from a testable mock pipeline to a live ML inference system.
