@@ -22,19 +22,19 @@ The included Streamlit dashboard provides deep insights into the dataset generat
 
 ### 1. High-Level Metrics
 Get an instant overview of the total samples, media types (audio, video, images), and label distribution (real vs. synthetic) in the current dataset iteration.
-![Dashboard Overview - High Level Metrics](screenshots/Screenshot\ 2026-03-08\ at\ 9.58.26\ AM.jpg)
+![Dashboard Overview - High Level Metrics](screenshots/01_metrics.jpg)
 
 ### 2. Detection Score Distribution
 Visualizes how well the baseline models distinguish between real and synthetic media across the dataset. The histogram shows the distribution of scores, with a decision boundary indicating the split.
-![Detection Score Distribution](screenshots/Screenshot\ 2026-03-08\ at\ 9.58.39\ AM.jpg)
+![Detection Score Distribution](screenshots/02_scores.jpg)
 
 ### 3. Validation Report & Media Types
 A breakdown of the data validation status. The donut chart instantly shows the pass/warn/fail rate for pipeline processing, while the bar chart displays the distribution of data across different media formats.
-![Validation & Media Types](screenshots/Screenshot\ 2026-03-08\ at\ 9.58.48\ AM.jpg)
+![Validation & Media Types](screenshots/03_validation.jpg)
 
 ### 4. Interactive Sample Browser
 A detailed, filterable data table containing every sample's metadata, detection scores, file sizes, validation status, and inference times. Filter and sort directly in the browser to isolate specific edge cases.
-![Interactive Sample Data Table](screenshots/Screenshot\ 2026-03-08\ at\ 9.58.58\ AM.jpg)
+![Interactive Sample Data Table](screenshots/04_browser.jpg)
 
 ---
 
