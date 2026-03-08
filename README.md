@@ -55,6 +55,19 @@ Currently supported out-of-the-box:
 
 ---
 
+## 🧪 Sample Data Generation
+
+To allow developers to immediately test the dashboard and pipeline without downloading massive deepfake datasets (like DFDC or FaceForensics++), the repository includes a standalone local data generation script (`scripts/generate_sample_data.py`).
+
+Running the script automatically generates a tiny, mathematically-synthetic dataset in the `data/raw/` folder using Python standard libraries, NumPy, and OpenCV:
+- **Images:** Generates 128x128 solid-color matrices with randomized Gaussian noise. "Real" labeled images are skewed green; "Synthetic" labeled images are skewed red. 
+- **Audio:** Generates pure 1-second sine wave `WAV` files (A4 440Hz for "Real" and A5 880Hz for "Synthetic").
+- **Video:** Generates short `MP4` clips containing solid colored frames (running at 10 FPS).
+
+This ensures you can always validate the end-to-end data engineering pipeline, metadata extraction, validation schema rules, and HuggingFace inference scoring on your local machine instantly, regardless of your internet connection or storage constraints.
+
+---
+
 ## 🛠 Tech Stack
 
 - **Core Application:** Python 3.10+
